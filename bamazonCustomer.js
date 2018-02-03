@@ -67,6 +67,11 @@ function userQty(id){
                 console.log("Quantity Available: " + data[0].stock_quantity);
                 if (answer.qty <= data[0].stock_quantity) {
                     console.log("You can proceed with your order");
+                    // Once the customer has placed the order, take user's input and compare to see if store has enough product to meet the customer's request. Go into mysql database to compare if stock >= user's input
+                    // If it's true that stock is greater to or equal to user's input do the following in mysql:
+                    // Once update complete, show customer the total cost of their purchase.
+                    console.log("You're total is " + answer.qty * data[0].price)
+                    // Create order by Updating mysql
                     "Update products SET? WHERE?", 
                     [
                         {
@@ -83,14 +88,12 @@ function userQty(id){
                     userSearch();
                 }
             });
-// Once the customer has placed the order, take user's input and compare to see if store has enough product to meet the customer's request. Go into mysql database to compare if stock >= user's input
 
         }); 
 }
 
-// If it's true that stock is greater to or equal to user's input do the following in mysql:
-// 1. Create order by Updating mysql
-// 2. Once update complete, show customer the total cost of their purchase. 
+
+ 
 
 
 

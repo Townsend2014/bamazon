@@ -1,0 +1,27 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "bamazon",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Townsend2014/bamazon.git"
+  },
+  "keywords": [
+    "bamazon"
+  ],
+  "author": "Saymay Townsend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Townsend2014/bamazon/issues"
+  },
+  "homepage": "https://github.com/Townsend2014/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^5.0.1",
+    "mysql": "^2.15.0",
+    "prompt": "^1.0.0"
+  }
+}

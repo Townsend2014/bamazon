@@ -72,15 +72,22 @@ function userQty(id){
                     // Once update complete, show customer the total cost of their purchase.
                     console.log("You're total is " + answer.qty * data[0].price)
                     // Create order by Updating mysql
-                    "Update products SET? WHERE?", 
+                    connection.query("Update products SET ? WHERE ?", 
                     [
                         {
-                            stock_quantity: stock_quantity - answer.qty
+                            stock_quantity: data[0].stock_quantity - answer.qty
                         },
                         {
-                            item_id
+                            item_id: id
                         }
-                    ]
+                    ], function(err2, data2) {
+
+                        if (err2) throw err2;
+                        console.log(data2);
+
+                    });
+
+
                 } else {
 
                     // If not, alert user `Insufficient quantity!`, then ask user if they would like to buy something else? Recall userSearch function 
